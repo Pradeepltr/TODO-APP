@@ -1,0 +1,142 @@
+/*Set body background colour*/
+html
+{
+    background-color: antiquewhite;
+}
+/*For heading alignment center*/
+.heading
+{
+    text-align: center;
+}
+/*Set button alignment center and for top margine*/
+.btn_container
+{
+    text-align: center;
+    margin-top: 1rem;
+}
+/*Set size and background of box where Take input and display*/
+main{
+    margin-left: 25%;
+    margin-right: 30%;
+    width: 50rem;
+    height: fit-content;
+    background-color:white ;
+}
+/*set style of description box*/
+.top_desc
+{
+    font-weight:bold;
+    font-size: 20px;
+    width: inherit;
+    background-color: lavender;
+    border: 1px solid gray;
+    padding: 1rem;
+
+}
+/*set style of all input box used in application*/
+input{
+    outline: none;
+    border-style: none;
+    width: 80%;
+    height:2rem ;
+    background-color:lavender ;
+
+}
+/*style of down description box where category and time take input*/
+.down_desc
+{
+    display:flex;
+    background-color: lavender;
+    border: 1px solid gray;
+    /* padding: 1rem; */
+    font-size: 20px;
+    font-weight: bold;
+}
+/*set style of down description right item that is take input of date and time*/
+.down_desc_right
+
+{   
+    padding: 1rem;
+    float: right;
+    width: 50%;
+    border: 1px solid gray;
+    padding: 1px;
+}
+/*set style of down description left item that is take input of category*/
+.down_desc_left
+{  
+   padding: 1rem;
+    float: left;
+    width: 50%;
+    border: 1px solid gray;
+}
+/*style of select item box*/
+select{
+    outline: none;
+    border: none;
+    background-color: lavender;
+}
+/*set button style*/
+button{
+    background-color: cadetblue;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    margin-bottom: 3rem;
+}
+/*for left margine of delete task button*/
+#delete_task_btn
+{
+    margin-left: 2rem;
+}
+/* box style where our task , deadline and category display in App*/
+.task 
+{
+    background-color: chartreuse;
+    display: flex;
+    padding: 1rem;
+    border: 1px solid gray;
+    
+    
+}
+/*set checkbox width*/
+.check
+{
+    width: 1rem;
+}
+/*set style of task description who inside of display box*/ 
+.task_desc
+{
+    font-weight: bold;
+    margin-left: 20%;
+    font-size: 20px;
+    width: 40rem;
+    display: flex;
+}
+/*set style of due_date who inside of display box*/ 
+.task_due
+{
+    font-weight: bold;
+    margin-left: 20%;
+    font-size: 20px;
+    width: 40rem;
+    
+}
+
+ 
+/*set category style for set look like a button*/
+.task_category
+{
+    margin-left: 60%;
+    background-color: chocolate;
+    border: 1px solid gray;
+    border-radius: .3rem;
+    width: 5rem;
+    text-align: center;
+    height: 2rem;
+    vertical-align: middle;
+}
+    /* #due_date
+{
+    margin-bottom: 1rem;
+} */

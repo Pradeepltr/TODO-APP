@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--FontAwesome link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Local css link-->
+    <link rel="stylesheet" href="../public/list.css" type="text/css" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title>TODO APP</title>
+  </head>
+  <body>
+    <main>
+      <!-- Heading -->
+      <div class="heading">
+        <h1>TODO App</h1>
+      </div>
+      <!-- Form to enter task details -->
+      <div class="form_container">
+        <form
+          action="/create-task"
+          method="post"
+          id="add_task_form"
+          autocomplete="off"
+        >
+          <div class="top_desc" id="description_tag">
+            <label for="description">Description</label>
+            <br />
+            <input
+              type="text"
+              name="description"
+              id="description"
+              placeholder="What do you need to do"
+              required
+            />
+          </div>
+          <div class="down_desc">
+            <div class="down_desc_left" id="category_tag">
+              <label for="category">Category</label>
+              <br />
+              <select name="category" id="category" required>
+                <option value="">Choose a category</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="school">School</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="down_desc_right" id="date_tag">
+              <label for="due-date">Due date</label>
+              <br />
+              <input
+                type="date"
+                id="due_date"
+                name="due_date"
+                min="2021-10-06"
+                required
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Submit buttons for both forms -->
+      <div class="btn_container flex halign valign">
+        <!-- button for add task -->
+        <button
+          type="submit"
+          form="add_task_form"
+          class="flex halign valign"
+          id="add_task_btn"
+        >
+          <i class="fas fa-plus"></i>Add Task
+        </button>
+        <!-- button for deleting tasks -->
+        <button
+          type="submit"
+          form="delete_task_form"
+          class="flex halign valign"
+          id="delete_task_btn"
+        >
+          <i class="far fa-trash-alt"></i>Delete Tasks
+        </button>
+      </div>
+      <!-- Display Task List -->
+      <div class="task_container">
+        <form action="/delete" method="post" id="delete_task_form" autocomplete="off">
+          <!-- code to display tasks -->
+          <% for (let i of list){ %>
+          <div class="task flex valign">
+            <input type="checkbox" class="check" id="<%= i._id %>" name="<%= i._id %>" value="<%= i.description %>"/>
+            <label class="flex valign" for="<%= i._id %>">
+              <div class="task_details_left">
+                <div class="task_desc"><%= i.description %>
+                  <div class="task_category <%= i.category %> flex valign halign">
+                    <%= i.category %>
+                  </div>
+                </div>
+                <div class="task_due">
+                  <i class="far fa-calendar-alt"></i>
+               
+                     <%= i.due_date %>
+                    
+                </div>
+                
+              </div>
+            
+            </label>
+          </div>
+          <% } %>
+        </form>
+      </div>
+    </main>
