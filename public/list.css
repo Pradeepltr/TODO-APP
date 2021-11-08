@@ -140,3 +140,24 @@ button{
 {
     margin-bottom: 1rem;
 } */
+@media screen and (max-width: 1250px) {
+    main{
+        margin-left: 10%;
+        margin-right: 10%;
+        
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    main{
+        margin-left: 10%;
+        margin-right: 5%;
+        
+    }
+  }
+  
+@media screen and (max-width: 630px) {
+   main{
+       margin-left: 0;
+       
+   }
+  }
