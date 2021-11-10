@@ -17,6 +17,12 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
     <title>TODO APP</title>
   </head>
+  <%
+  function changeDate(date)
+  {
+   var chngdate=date.toDateString();
+   return chngdate;
+  } 
   <body>
     <main>
       <!-- Heading -->
@@ -107,7 +113,9 @@
                 <div class="task_due">
                   <i class="far fa-calendar-alt"></i>
                
-                     <%= i.due_date %>
+                     <%= 
+                     changeDate(i.due_date );
+                     %>
                     
                 </div>
                 
